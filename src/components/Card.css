@@ -1,0 +1,88 @@
+.card{
+  aspect-ratio: 23/16;
+  width: 100%;
+  border-radius: 10%;
+  cursor: pointer;
+  align-content: center;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.card img{
+  max-width: -webkit-fill-available;
+  aspect-ratio: 225/155;
+  justify-self: center;
+  display: flex;
+  border-radius: 8%;
+}
+
+.card span{
+  display: flex;
+  font-size: clamp(27px, 14px + 1.6927vw, 40px);
+  font-weight: 300;
+  justify-self: center;
+  text-align: center;
+}
+
+.heb{  
+  border: 4px solid rgb(252, 174, 79);;
+  background-color: rgb(252, 174, 79);
+}
+
+.non-heb{
+  border: 4px solid bisque;
+  background-color: bisque;
+}
+
+.heb:not(.chosen-card):not(.finished-card):hover{
+  transition: 0.2s;
+  border: 4px solid rgb(255, 197, 126);
+  background-color: rgb(255, 197, 126);
+}
+
+.non-heb:not(.chosen-card):not(.finished-card):hover{
+  transition: 0.2s;
+  border: 4px solid rgb(255, 246, 235);
+  background-color: rgb(255, 246, 235);
+}
+
+@keyframes shake {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-8px); }
+  75%  {transform: translateX(8px);}
+  100% { transform: translateX(0); }
+}
+
+.wrong-choice{
+  animation: shake 0.25s ease-out;
+}
+
+.chosen-card{
+  transition: 0.3s;
+  border-color:lightcoral;
+  background-color: lightcoral;
+  cursor: default;
+}
+
+@keyframes jump {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-8px); }
+  60% { transform: translateY(0)  }
+  100% {transform: scale(0.9);}
+}
+
+.finished-card{
+  transition: 0.6s;
+  animation: jump 0.8s ease-out;
+  transform: scale(0.9);
+  border-color:aquamarine;
+  background-color: aquamarine;
+  cursor: default;
+  z-index: 1
+}
+
+@media (max-width: 768px) {
+  .card span{
+    font-size: clamp(16px, 1.8824px + 3.9216vw, 32px);
+  }
+}

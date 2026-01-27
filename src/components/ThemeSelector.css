@@ -1,0 +1,48 @@
+.theme-selector{
+  width: 100%;
+  height: 45px;
+  font-family: Gothic-60;
+  text-transform: uppercase;
+  font-size: 20px;
+  border: 2px solid black;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  background-color:rgb(59, 122, 240);
+  color: aliceblue;
+  border-radius: 4px;
+}
+
+.theme-selector:hover{
+  transition: 0.3s;
+  background-color: rgb(88, 141, 240);
+  cursor: pointer;
+}
+
+.theme-options{
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+
+.selector-item{
+  background-color: rgb(59, 122, 240);
+  color:aliceblue;
+  display: flex;
+  height: 45px;
+  font-family: Gothic-60;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 1px;
+  padding-left: 2px;
+  padding-right: 7px;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.selector-item:hover{
+  border: none;
+  background-color: rgb(88, 141, 240);
+  border: 1px solid black;
+}
