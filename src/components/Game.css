@@ -54,7 +54,7 @@
   .div-gamestats{
     margin-top: 1px;
     display: grid;
-    gap: 10px clamp(100px, 29.4118px + 19.6078vw, 180px);
+    gap: 10px clamp(10px, -111.4286px + 37.9464vw, 180px);
   }
 
   .gamestats{

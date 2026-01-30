@@ -10,6 +10,7 @@
 
 .card img{
   max-width: -webkit-fill-available;
+  max-height: -webkit-fill-available;
   aspect-ratio: 225/155;
   justify-self: center;
   display: flex;

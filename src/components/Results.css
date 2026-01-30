@@ -6,14 +6,13 @@
   top: 50%;
   transform: translate(-50%, -50%);
   max-width: 50%;
-  max-height: 30%;
   border-radius: 10px;
   border: 2px solid black;
   z-index: 5;
+  padding: 10px;
 }
 
 .results{
-  margin: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,5 +60,18 @@
   .results h1{
     width: auto;
     font-size: 20px;
+  }
+
+  .results-button{
+    margin-bottom: 5px;
+    width: 150px;
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .results p{
+    text-align: center;
+    text-wrap: wrap;
+    margin-bottom: 3px;
   }
 }

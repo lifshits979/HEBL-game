@@ -1,7 +1,7 @@
 {
   "name": "hebl",
   "version": "0.1.0",
-  "homepage": "https://github.com/lifshits979/HEBL-game",
+  "homepage": "https://lifshits979.github.io/HEBL-game/",
   "private": true,
   "dependencies": {
     "@radix-ui/react-select": "^2.2.6",
