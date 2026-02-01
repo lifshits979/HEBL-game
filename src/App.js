@@ -1,23 +1,23 @@
-import React from 'react';
+import {useState, useEffect} from 'react';
 import './App.css';
 import Game from './components/Game'
 import StartPage from './components/StartPage'
 
 function App({cardArray, shuffle}){
-  const [gameState, setGameState] = React.useState('StartPage');
-  const [gameRegime, setGameRegime] = React.useState('pics');
-  const [gameTheme, setGameTheme] = React.useState('no-theme')
+  const [gameState, setGameState] = useState('StartPage');
+  const [gameRegime, setGameRegime] = useState('pics');
+  const [gameTheme, setGameTheme] = useState('no-theme')
 
-  const [pairsCount, setPairsCount] = React.useState(6)
-  const [finishedCards, setFinishedCards] = React.useState([])
-  const [chosenCards, setChosenCards] = React.useState([])
-  const [isWrong, setIsWrong] = React.useState([])
-  const [stepsCount, setStepsCount] = React.useState(0)
-  const [mistakesCount, setMistakesCount] = React.useState(0)
-  const [time, setTime] = React.useState(NaN);
+  const [pairsCount, setPairsCount] = useState(6)
+  const [finishedCards, setFinishedCards] = useState([])
+  const [chosenCards, setChosenCards] = useState([])
+  const [isWrong, setIsWrong] = useState([])
+  const [stepsCount, setStepsCount] = useState(0)
+  const [mistakesCount, setMistakesCount] = useState(0)
+  const [time, setTime] = useState(NaN);
 
-  const [isEnded, setIsEnded] = React.useState(false)
-  const [isWin, setIsWin] = React.useState(false)
+  const [isEnded, setIsEnded] = useState(false)
+  const [isWin, setIsWin] = useState(false)
 
   const getTheme = (cards, theme) => {
     if (theme === 'no-theme') return cards;
@@ -42,7 +42,7 @@ function App({cardArray, shuffle}){
     return shuffle(selectedPairs.flat());
   };
 
-  const [gameCards, setGameCards] = React.useState(['smthng']);
+  const [gameCards, setGameCards] = useState(['smthng']);
   const gameStart = () => {
     const themedCards = getTheme(cardArray, gameTheme); 
     const cards = getRandomPairedCards(themedCards, pairsCount);  
@@ -50,7 +50,7 @@ function App({cardArray, shuffle}){
     setGameState('Game')
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (finishedCards.length === gameCards.length){setIsWin(true); setTimeout(() => {setIsEnded(true)}, 1000)}
     if (mistakesCount>=(Math.floor(pairsCount/3)) && hpMode){setIsWin(false); setTimeout(() => {setIsEnded(true)}, 1000)}
   }, [mistakesCount, finishedCards]);
@@ -86,8 +86,8 @@ function App({cardArray, shuffle}){
     setGameState('StartPage');
   };
 
-  const [timeMode, setTimeMode] = React.useState(false)
-  const [hpMode, setHPMode] = React.useState(false)
+  const [timeMode, setTimeMode] = useState(false)
+  const [hpMode, setHPMode] = useState(false)
 
   const currentState = () => {
     switch(gameState){

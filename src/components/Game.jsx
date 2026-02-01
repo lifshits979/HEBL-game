@@ -37,6 +37,10 @@ const handleCardClick = (id, type) => {
       <ul className="cards">
         {cards}
       </ul>
+      <div className='back-buttons'>
+        {hpMode && <button className='back-button' onClick={restartTheGame}>Перезапуск игры</button>}
+        <button className='back-button' onClick={restartGame}>Вернуться в меню</button>
+      </div>
     </section>
   );
 }

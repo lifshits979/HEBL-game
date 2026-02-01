@@ -1,7 +1,10 @@
+import {useEffect} from 'react';
 import ThemeSelect from './ThemeSelector';
 import './StartPage.css';
+import CountChanger from './CountChanger';
 
 export default function StartPage({onGameRegime, gameRegime, onTimeMode, timeMode, onHPMode, hpMode, gameStart, pairsCount, setPairsCount, gameTheme, setGameTheme}){
+  useEffect(() => {CountChanger()})
   const pics = () => {onGameRegime('pics')}
   const ru = () => {onGameRegime('ru')}
   const eng = () => {onGameRegime('eng')}
@@ -41,7 +44,7 @@ export default function StartPage({onGameRegime, gameRegime, onTimeMode, timeMod
       </label>
       </div>
       </div>
-      <button className='game-start-button' onClick={gameStart}><p>{`${(gameRegime==='ru') ? 'Старт' : 'Start'}`}</p></button>
+      <button className='game-start-button' onClick={gameStart}>{`${(gameRegime==='ru') ? 'Старт' : 'Start'}`}</button>
     </section>
   )
 }

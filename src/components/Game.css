@@ -50,6 +50,28 @@
   max-width: 90%;
 }
 
+.back-buttons{
+  margin-top: 30px;
+  display: flex;
+  justify-self: end;
+}
+
+.back-button{
+  background-color: rgb(255, 107, 107);
+  border: 2px solid black;
+  border-radius: 5px;
+  width: clamp(130px, 40px + 11.7188vw, 220px);
+  margin-right: 5px;
+  height: 50px;
+  padding-top: 2px;
+  font-size: 16px;
+  cursor: pointer
+}
+
+.back-button:hover{
+  background-color: rgb(230, 99, 99);
+}
+
 @media (max-width: 768px) {
   .div-gamestats{
     margin-top: 1px;
