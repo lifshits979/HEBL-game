@@ -1,7 +1,7 @@
 .x-Results{
   background-color: rgb(183, 242, 255);
   transition: background-color 2s ease;
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -58,7 +58,7 @@
 
 @media (max-width: 768px){
   .results h1{
-    width: auto;
+    max-width: none;
     font-size: 20px;
   }
 

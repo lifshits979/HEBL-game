@@ -2,7 +2,7 @@ import './Results.css'
 export default function Results({stepsCount, restartGame, restartTheGame, isWin, finishedCards, pairsCount}){
     const victoryScreen = 
       <section className='results'>
-        <h1>Поздравляем! <br/> Вы закончили уровень из {pairsCount} слов за {stepsCount} шагов!</h1>
+        <h1>Поздравляем!</h1> <p> Вы закончили уровень из {pairsCount} слов за {stepsCount} шагов!</p>
         <button className='results-button' onClick={restartGame}>Вернуться в меню</button>
       </section>  
     const defeatScreen = 
