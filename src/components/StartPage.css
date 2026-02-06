@@ -198,7 +198,7 @@
   background-color: rgb(88, 141, 240);
   color:aliceblue;
   border: 2px solid black;
-  transition: background-color 0.3s
+  transition: color 0.3s, background-color 0.3s
 }
 
 @media (max-width: 768px){
