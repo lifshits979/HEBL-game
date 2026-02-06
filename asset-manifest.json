@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/HEBL-game/static/css/main.f3113f3b.css",
-    "main.js": "/HEBL-game/static/js/main.52320470.js",
+    "main.css": "/HEBL-game/static/css/main.c3efe6b4.css",
+    "main.js": "/HEBL-game/static/js/main.3cb7408b.js",
     "static/media/Gothic60-Regular.otf": "/HEBL-game/static/media/Gothic60-Regular.e2c76f39e1cfac6abd27.otf",
     "index.html": "/HEBL-game/index.html",
-    "main.f3113f3b.css.map": "/HEBL-game/static/css/main.f3113f3b.css.map",
-    "main.52320470.js.map": "/HEBL-game/static/js/main.52320470.js.map"
+    "main.c3efe6b4.css.map": "/HEBL-game/static/css/main.c3efe6b4.css.map",
+    "main.3cb7408b.js.map": "/HEBL-game/static/js/main.3cb7408b.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3113f3b.css",
-    "static/js/main.52320470.js"
+    "static/css/main.c3efe6b4.css",
+    "static/js/main.3cb7408b.js"
   ]
 }
